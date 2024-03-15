@@ -1,9 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import PowerButton from "../subComponents/PowerButton";
+import LogoComponent from "../subComponents/LogoComponent";
+import SocialIcons from "../subComponents/Sociallcons";
 
 const MainContainer = styled.div`
   background: ${(props) => props.theme.body};
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   position: relative;
@@ -25,7 +28,11 @@ const Container = styled.div`
 const Main = () => {
   return (
     <MainContainer>
-      <Container>Main Component/Page</Container>
+      <Container>
+        <PowerButton />
+        <LogoComponent />
+        <SocialIcons />
+      </Container>
     </MainContainer>
   );
 };
