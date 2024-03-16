@@ -31,7 +31,7 @@ export const Github = (props) => {
       data-icon="github"
       className="prefix__svg-inline--fa prefix__fa-github prefix__fa-w-16"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 496 512"
+      viewBox="0 0 520 522"
       {...props}
     >
       <path
@@ -50,7 +50,7 @@ export const Blog = (props) => {
       data-icon="Tistory"
       className="prefix__svg-inline--fa prefix__fa-facebook prefix__fa-w-16"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 459 459"
+      viewBox="0 0 540 540"
       {...props}
     >
       <path
@@ -69,7 +69,7 @@ export const Notion = (props) => {
       data-icon="Notion"
       className="prefix__svg-inline--fa prefix__fa-Notion prefix__fa-w-18"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 55 55"
+      viewBox="0 0 90 90"
       {...props}
     >
       <path
@@ -88,7 +88,7 @@ export const Instagram = (props) => {
       data-icon="Instagram"
       className="prefix__svg-inline--fa prefix__fa-Instagram prefix__fa-w-18"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 48 48"
+      viewBox="0 0 58 58"
       {...props}
     >
       <path
