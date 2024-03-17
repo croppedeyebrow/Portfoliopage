@@ -99,13 +99,13 @@ export const Instagram = (props) => {
   );
 };
 
-export const YinYang = (props) => {
+export const Taegeuk = (props) => {
   return (
     <svg
       aria-hidden="true"
       data-prefix="fas"
-      data-icon="yin-yang"
-      className="prefix__svg-inline--fa prefix__fa-yin-yang prefix__fa-w-16"
+      data-icon="tae-guek"
+      className="prefix__svg-inline--fa prefix__fa-tae-guek prefix__fa-w-16"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 496 512"
       {...props}

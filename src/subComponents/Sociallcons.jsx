@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Github, Notion, Blog, Instagram } from "../components/AllSvgs";
 import { color } from "framer-motion";
+import { darkTheme } from "../components/Themes";
 
 const Icons = styled.div`
   display: flex;
@@ -12,8 +13,10 @@ const Icons = styled.div`
   position: fixed;
   bottom: 0;
   left: 2rem;
-
+  gap: 1rem;
   z-index: 3;
+
+
 
   &>*::not(:last-child){
     margin: 0 5rem;
@@ -24,11 +27,12 @@ const Icons = styled.div`
 const Line = styled.span`
   width: 2px;
   height: 8rem;
-  background-color: ${(props) => props.theme.text};
+  background-color: ${(props) =>
+    props.color === "dark" ? darkTheme.text : darkTheme.body};
   margin-left: 0.5rem;
 `;
 
-const SocialIcons = () => {
+const SocialIcons = (props) => {
   return (
     <Icons>
       <div>
@@ -37,7 +41,11 @@ const SocialIcons = () => {
           target="_blank"
           href="https://github.com/croppedeyebrow"
         >
-          <Github width={25} height={25} fill="currentColor" />
+          <Github
+            width={25}
+            height={25}
+            fill={props.theme === "dark" ? darkTheme.text : darkTheme.body}
+          />
         </a>
       </div>
 
@@ -47,7 +55,11 @@ const SocialIcons = () => {
           target="_blank"
           href="https://cut-eyebrow.tistory.com/"
         >
-          <Blog width={25} height={25} fill="currentColor" />
+          <Blog
+            width={25}
+            height={25}
+            fill={props.theme === "dark" ? darkTheme.text : darkTheme.body}
+          />
         </a>
       </div>
       <div>
@@ -56,7 +68,11 @@ const SocialIcons = () => {
           target="_blank"
           href="https://neulsom-insight.notion.site/29b7a54ac56c46f7bf8a988e86c8ff3c"
         >
-          <Notion width={25} height={25} fill="currentColor" />
+          <Notion
+            width={25}
+            height={25}
+            fill={props.theme === "dark" ? darkTheme.text : darkTheme.body}
+          />
         </a>
       </div>
       <div>
@@ -65,10 +81,14 @@ const SocialIcons = () => {
           target="_blank"
           href="https://www.instagram.com/dev_cordinate_spa/"
         >
-          <Instagram width={25} height={25} fill="currentColor" />
+          <Instagram
+            width={25}
+            height={25}
+            fill={props.theme === "dark" ? darkTheme.text : darkTheme.body}
+          />
         </a>
       </div>
-      <Line />
+      <Line color={props.theme} />
     </Icons>
   );
 };

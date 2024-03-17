@@ -1,77 +1,78 @@
 // blog data
 
+import frontend from "../assets/Images/frontend.jpg";
+import project from "../assets/Images/project.jpg";
+import crossplatform from "../assets/Images/crossplatform.jpg";
+import native from "../assets/Images/kotlin.jpg";
+import uiux from "../assets/Images/uiux.jpg";
+import python from "../assets/Images/python.jpg";
+import data from "../assets/Images/DB.jpg";
+import business from "../assets/Images/Businessmodal.png";
+
 export const Blogs = [
   {
     id: 1,
-    name: "Build Website with ReactJS, Styled-components and GSAP for Scrolling Animations",
-    tags: ["react", "gsap", "styled-components"],
-    date: "13 May, 2021",
-    imgSrc:
-      "https://res.cloudinary.com/practicaldev/image/fetch/s--sBeV06Xc--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2yrzy75q4dzibqz6rf82.png",
-    link: "https://dev.to/codebucks/build-website-with-reactjs-styled-components-and-gsap-for-scrolling-animations-2f10",
+    name: "프로젝트",
+    tags: ["Project", "Frontend", "APP"],
+    date: "from 2023~",
+    imgSrc: project,
+    link: "https://cut-eyebrow.tistory.com/category/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC",
   },
   {
     id: 2,
-    name: "How to create React Hamburger Menu using Styled-Components",
-    tags: ["react", "styled-components"],
-    date: "5 July, 2021",
-    imgSrc:
-      "https://codebucks.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1625479747640%2F7KzwP9nmj.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=1920&q=75",
-    link: "https://codebucks.hashnode.dev/react-hamburger-menu",
+    name: "프론트엔드",
+    tags: ["react", "javascript", "styled-components", "Frontend"],
+    date: "from 2023~",
+    imgSrc: frontend,
+    link: "https://cut-eyebrow.tistory.com/category/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C",
   },
   {
     id: 3,
-    name: "React Loading Screen: Try these 3 cool loading screens for your app",
-    tags: ["react", "react-lottie", "styled-components"],
-    date: "6 July, 2021",
-    imgSrc:
-      "https://codebucks.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1625552344293%2Fegwis0UIX.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=1920&q=75",
-    link: "https://codebucks.hashnode.dev/react-loading-screens",
+    name: "크로스플랫폼 : 플러터, 리엑트네이티브",
+    tags: ["APP", "flutter", "react-native", "Frontend", "CrossPlatform"],
+    date: "from 2424~",
+    imgSrc: crossplatform,
+    link: "https://cut-eyebrow.tistory.com/category/%EC%95%B1%EA%B0%9C%EB%B0%9C",
   },
   {
     id: 4,
-    name: "How to build a Fabulous Todo App using React, Redux and Framer-Motion",
-    tags: ["react", "redux", "framer-motion"],
-    date: "26 May, 2021",
-    imgSrc:
-      "https://res.cloudinary.com/practicaldev/image/fetch/s--r5oUDhhT--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/036s7j5b73up7455rdth.png",
-    link: "https://dev.to/codebucks/build-redux-react-todo-list-app-with-animations-using-framer-motion-1mp1",
+    name: "네이티브 : 코틀린",
+    tags: ["APP", "kotlin", "Frontend", "Native"],
+    date: "from 2024~",
+    imgSrc: native,
+    link: "https://cut-eyebrow.tistory.com/category/%EC%95%B1%EA%B0%9C%EB%B0%9C",
   },
   {
     id: 5,
-    name: "What is Higher Order Component (HOC) in React JS?",
-    tags: ["react", "reactJS", "web-development"],
-    date: "3 Feb, 2021",
-    imgSrc:
-      "https://codebucks.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1625295480148%2FlyKj8bpHK.jpeg%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=1920&q=75",
-    link: "https://codebucks.hashnode.dev/what-is-higher-order-component",
+    name: "UIUX",
+    tags: ["UIUX", "Figma", "Spline"],
+    date: "from 2023~",
+    imgSrc: uiux,
+    link: "https://cut-eyebrow.tistory.com/category/UIUX%20%EC%97%AD%EB%9F%89",
   },
   {
     id: 6,
-    name: "How to implement Pagination Component in React from scratch",
-    tags: ["react", "css"],
-    date: "5 Jan, 2021",
-    imgSrc:
-      "https://codebucks.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1625240050668%2FGAya9b0XK.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=1920&q=75",
-    link: "https://codebucks.hashnode.dev/pagination-in-react",
+    name: "Python",
+    tags: ["python", "Backend", "Django", "Flask"],
+    date: "from 2023~",
+    imgSrc: python,
+    link: "https://cut-eyebrow.tistory.com/category/%EB%B0%B1%EC%97%94%EB%93%9C",
   },
 
   {
     id: 7,
-    name: "What is Redux ? Simply Explained!",
-    tags: ["react", "redux", "javascript"],
-    date: "16 May, 2021",
-    imgSrc:
-      "https://res.cloudinary.com/practicaldev/image/fetch/s--ZY1EK-Eo--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/bcz1u90oq3prr5fga3fs.png",
-    link: "https://dev.to/codebucks/what-is-redux-simply-explained-2ch7",
+    name: "Data관리",
+    tags: ["Data", "DB", "SQL"],
+    date: "from 2023~",
+    imgSrc: data,
+    link: "https://cut-eyebrow.tistory.com/category/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D%EA%B8%B0%ED%9A%8D%20%EB%B0%8F%20%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81",
   },
   {
     id: 8,
-    name: "How to create Sidebar navigation menu in ReactJS with react router and framer-motion",
-    tags: ["react", "framer-motion", "styled-components"],
-    date: "26 May, 2021",
-    imgSrc:
-      "https://res.cloudinary.com/practicaldev/image/fetch/s--rv4I8UwE--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0a9h50milhlf1us6mn4a.png",
-    link: "https://dev.to/codebucks/build-sidebar-navigation-menu-in-reactjs-with-react-router-and-framer-motion-for-cool-page-transition-effects-4bc3",
+    name: "도메인/비즈니스모델",
+    tags: ["BusinessModal", "Domain"],
+    date: "from 2023~",
+    imgSrc: business,
+    link: "https://cut-eyebrow.tistory.com/category/%EB%8F%84%EB%A9%94%EC%9D%B8%20%EA%B3%B5%EB%B6%80%20%EB%B0%8F%20%EC%82%AC%EC%97%85%20%EA%B8%B0%ED%9A%8D%20%EC%97%AD%EB%9F%89",
   },
 ];
