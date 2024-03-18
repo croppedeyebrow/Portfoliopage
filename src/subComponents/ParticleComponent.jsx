@@ -24,7 +24,7 @@ const ParticleComponent = () => {
         }
       };
       p.draw = () => {
-        p.background(255);
+        p.clear(); // Add this line
 
         for (let i = 0; i < particles.length; i += 3) {
           particles[i].update();
@@ -55,11 +55,7 @@ const ParticleComponent = () => {
         show() {
           this.p.stroke(200);
           this.p.strokeWeight(4);
-          this.p.beginShape();
-          this.p.vertex(this.x, this.y);
-          this.p.vertex(this.x + 10, this.y + 20);
-          this.p.vertex(this.x - 10, this.y + 20);
-          this.p.endShape(this.p.CLOSE);
+          this.p.point(this.x, this.y);
         }
       }
     }, "canvas-container");
