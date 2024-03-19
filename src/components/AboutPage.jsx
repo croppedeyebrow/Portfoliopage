@@ -9,6 +9,7 @@ import SocialIcons from "../subComponents/Sociallcons";
 import PowerButton from "../subComponents/PowerButton";
 import astronaut from "../assets/Images/spaceman.png";
 import ParticleComponent from "../subComponents/ParticleComponent";
+import BigTitle from "../subComponents/BigTitle";
 
 const SkillContainer = styled.div`
   background: ${(props) => props.theme.body};
@@ -87,6 +88,8 @@ const AboutPage = () => {
           <br></br>
           You have nothing to lose, Everything to gain. Just do it!! <br></br>{" "}
         </Main>
+
+        <BigTitle text="ABOUT" top="5rem" left="5rem" />
       </SkillContainer>
     </ThemeProvider>
   );

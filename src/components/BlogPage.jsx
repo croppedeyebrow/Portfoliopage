@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Blogs } from "../data/BlogData";
 import BlogComponent from "./BlogComponent";
 import AnchorComponent from "../subComponents/Anchor";
+import BigTitle2 from "../subComponents/BigTitle2";
 
 const MainContainer = styled.div`
   background-image: url(${backimg});
@@ -71,6 +72,7 @@ const BlogPage = () => {
             })}
           </BlockLine>
         </Center>
+        <BigTitle2 text="BLOG" top="5rem" left="5rem" />
       </Container>
     </MainContainer>
   );

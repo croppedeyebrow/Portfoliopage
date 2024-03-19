@@ -7,8 +7,9 @@ import Dblack from "../assets/Images/director-black.png";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/Sociallcons";
 import PowerButton from "../subComponents/PowerButton";
-import ParticleContainer from "../subComponents/ParticleComponent";
 import ParticleComponent from "../subComponents/ParticleComponent";
+
+import MySillTitle from "../subComponents/MyskillTitle";
 
 const SkillContainer = styled.div`
   background: ${(props) => props.theme.body};
@@ -173,6 +174,7 @@ const MySkillsPage = () => {
             <p>VScode, Github, intellij, pycharm</p>
           </Description>
         </SkillMain>
+        <MySillTitle text="SKILLS" top="74%" left="30%" />
       </SkillContainer>
     </ThemeProvider>
   );
