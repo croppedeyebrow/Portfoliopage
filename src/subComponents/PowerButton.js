@@ -4,6 +4,7 @@ import React from "react";
 import styled from "styled-components";
 import { PowerBtn } from "../components/AllSvgs";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Power = styled.button`
   position: fixed;
@@ -42,11 +43,20 @@ const Power = styled.button`
 // color: inherit;: 부모 요소로부터 글자 색상을 상속받습니다.
 
 const PowerButton = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/");
+  };
+
   return (
     <Power>
-      <NavLink to="/">
-        <PowerBtn width={30} height={30} fill="currentColor" />
-      </NavLink>
+      <PowerBtn
+        onClick={handleClick}
+        width={30}
+        height={30}
+        fill="currentColor"
+      />
     </Power>
   );
 };

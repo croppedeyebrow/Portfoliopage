@@ -52,7 +52,7 @@ const Blog = styled(NavLink)`
 `;
 
 const Work = styled(NavLink)`
-  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+  color: ${(props) => (props.active ? props.theme.body : props.theme.text)};
   position: absolute;
   top: 42%;
   font-size: 0.88rem;
@@ -75,14 +75,14 @@ const BottomBar = styled.div`
 `;
 
 const About = styled(NavLink)`
-  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+  color: ${(props) => (props.active ? props.theme.body : props.theme.text)};
 
   text-decoration: none;
   z-index: 1;
 `;
 
 const SkillsPage = styled(NavLink)`
-  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+  color: ${(props) => (props.active ? props.theme.body : props.theme.text)};
 
   text-decoration: none;
   z-index: 1;
@@ -185,20 +185,20 @@ const Main = () => {
           </motion.h2>
         </Blog>
 
-        <Work to="/work" click={click}>
+        <Work to="/work" isActive={() => click}>
           <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             Work
           </motion.h2>
         </Work>
 
         <BottomBar>
-          <About to="/about" click={click}>
+          <About to="/about" isActive={() => click}>
             <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               About Me
             </motion.h2>
           </About>
 
-          <SkillsPage to="/skills">
+          <SkillsPage to="/skills" isActive={() => click}>
             <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               My Skills
             </motion.h2>
