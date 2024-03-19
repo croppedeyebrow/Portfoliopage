@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./globalStyle";
 import { darkTheme, lightTheme } from "./components/Themes";
@@ -9,10 +14,13 @@ import AboutPage from "./components/AboutPage";
 import BlogPage from "./components/BlogPage";
 import WorkPage from "./components/WorkPage";
 import MySkillsPage from "./components/MySkillsPage";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   return (
     <ThemeProvider theme={lightTheme}>
+      {/* 애니메이션효과 */}
+
       <GlobalStyle />
       <Router>
         <Routes>

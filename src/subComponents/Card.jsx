@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Github } from "../components/AllSvgs";
+import { motion } from "framer-motion";
 
-const CardBox = styled.li`
+const CardBox = styled(motion.li)`
   width: 20rem;
   height: 40vh;
   background-color: ${(props) => props.theme.text};
@@ -91,6 +92,19 @@ const Git = styled.div`
   }
 `;
 
+const Item = {
+  hidden: {
+    scale: 0,
+  },
+  show: {
+    scale: 1,
+    transition: {
+      type: "spring",
+      duration: 0.5,
+    },
+  },
+};
+
 const Card = (props) => {
   const { id, name, description, tags, demo, github } = props.data;
 
@@ -113,7 +127,7 @@ const Card = (props) => {
   };
 
   return (
-    <CardBox key={id}>
+    <CardBox key={id} variants={Item}>
       <Title>{name}</Title>
 
       <Description>{description}</Description>

@@ -9,6 +9,7 @@ import BigTitle from "../subComponents/BigTitle";
 import { Work } from "../data/WorkData";
 import Card from "../subComponents/Card";
 import { Taegeuk } from "./AllSvgs";
+import { motion } from "framer-motion";
 
 const WorkContainer = styled.div`
   background: ${(props) => props.theme.body};
@@ -19,7 +20,7 @@ const WorkContainer = styled.div`
   align-items: center;
 `;
 
-const WokrMain = styled.ul`
+const WokrMain = styled(motion.ul)`
   position: fixed;
   top: 12rem;
   left: calc(10rem + 15vw);
@@ -38,6 +39,17 @@ const Rotate = styled.span`
   width: 5rem;
   z-index: 1;
 `;
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+      duration: 0.5,
+    },
+  },
+};
 
 const WorkPage = () => {
   const ref = useRef(null);
@@ -63,7 +75,12 @@ const WorkPage = () => {
         <SocialIcons theme="dark" />
         <PowerButton />
 
-        <WokrMain ref={ref}>
+        <WokrMain
+          ref={ref}
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
           {Work.map((d) => (
             <Card key={d.id} data={d} />
           ))}
