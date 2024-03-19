@@ -19,7 +19,7 @@ const ParticleComponent = () => {
       p.setup = () => {
         p.createCanvas(p.windowWidth, p.windowHeight);
 
-        for (let i = 0; i < 130; i++) {
+        for (let i = 0; i < 240; i++) {
           particles[i] = new Particle(p.random(p.width), p.random(p.height), p);
         }
       };
@@ -40,10 +40,18 @@ const ParticleComponent = () => {
         }
 
         update() {
+          let dx = this.p.mouseX - this.x;
+          let dy = this.p.mouseY - this.y;
+          let distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 50) {
+            this.x -= (dx / distance) * 5;
+            this.y -= (dy / distance) * 5;
+          }
+
           this.x += 0.5;
           this.y += 0.5;
 
-          // If the particle goes off the edge of the screen, wrap it around to the other side
           if (this.x > this.p.width) {
             this.x = 0;
           }
@@ -55,7 +63,14 @@ const ParticleComponent = () => {
         show() {
           this.p.stroke(200);
           this.p.strokeWeight(4);
-          this.p.point(this.x, this.y);
+          this.p.triangle(
+            this.x,
+            this.y,
+            this.x + 10,
+            this.y,
+            this.x + 5,
+            this.y + 10
+          );
         }
       }
     }, "canvas-container");

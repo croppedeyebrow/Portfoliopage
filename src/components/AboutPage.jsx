@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider, keyframes } from "styled-components";
 import { darkTheme } from "./Themes";
 import { Design, Develope } from "./AllSvgs";
 import Directing from "../assets/Images/director.png";
@@ -7,7 +7,7 @@ import Dblack from "../assets/Images/director-black.png";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/Sociallcons";
 import PowerButton from "../subComponents/PowerButton";
-
+import astronaut from "../assets/Images/spaceman.png";
 import ParticleComponent from "../subComponents/ParticleComponent";
 
 const SkillContainer = styled.div`
@@ -15,164 +15,78 @@ const SkillContainer = styled.div`
   width: 100vw;
   height: 100vh;
   position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  overflow: hidden;
 `;
 
-const SkillMain = styled.div`
+const float = keyframes`
+0% {transform:translateY(-10px)}
+50% {transform:translateY(15px) translateX(15px)}
+100% {transform:translateY(-10px)}
+
+`;
+
+const Spaceman = styled.div`
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 20vw;
+  animation: ${float} 4s ease infinite;
+  img {
+    width: 100%;
+    height: auto;
+  }
+`;
+
+const Main = styled.div`
   border: 2px solid ${(props) => props.theme.text};
   color: ${(props) => props.theme.text};
-  background-color: ${(props) => props.theme.body};
   padding: 2rem;
-  width: 24vw;
-  height: 60vh;
+  width: 50vw;
+  height: 70vh;
   z-index: 3;
   line-height: 1.5;
-  cursor: pointer;
 
-  font-family: "Ubuntu Mono", monospace;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  &:hover {
-    color: ${(props) => props.theme.body};
-    background-color: ${(props) => props.theme.text};
-  }
-`;
-
-const Directimg = styled.div`
-  width: 40px;
-  height: 40px;
-  background: url(${Directing}) no-repeat center;
-  background-size: cover;
-
-  ${SkillMain}:hover & {
-    background: url(${Dblack}) no-repeat center;
-    background-size: cover;
-  }
-`;
-
-const Title = styled.h2`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: calc(1rem + 1vw);
-  gap: 1rem;
+  font-size: calc(0.6rem + 1vw);
+  backdrop-filter: blur(5px);
 
-  ${SkillMain}:hover & {
-    & > * {
-      fill: ${(props) => props.theme.body};
-    }
-  }
+  position: absolute;
+  left: calc(10rem + 2vw);
+  top: 10rem;
 
-  & > *:first-child {
-    margin-right: 1rem;
-  }
-`;
-
-const Description = styled.div`
-  color: ${(props) => props.theme.text};
-  font-size: calc(0.5rem + 0.6vw);
-  padding: 0.5rem 0;
-
-  strong {
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-  }
-  ul,
-  p {
-    margin-left: 2rem;
-  }
-
-  ${SkillMain}:hover & {
-    color: ${(props) => props.theme.body};
-  }
-
-  & > *:first-child {
-    margin-right: 1rem;
-  }
+  font-family: "Ubuntu Mono", monospace;
+  font-style: italic;
 `;
 
 const AboutPage = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <SkillContainer>
-        <LogoComponent theme="light" />
-        <SocialIcons theme="light" />
+        <LogoComponent theme="dark" />
+        <SocialIcons theme="dark" />
         <PowerButton />
-        <ParticleComponent theme="light" />
+        <ParticleComponent theme="dark" />
 
-        <SkillMain>
-          <Title>
-            {" "}
-            <Directimg src={Directing} alt="디렉터" /> Director{" "}
-          </Title>
-          <Description>
-            I like to make a plan that considers BM and ux, and I like to
-            increase efficiency and effectiveness
-          </Description>
-          <Description>
-            <strong>I like to Directing</strong>
-            <ul>
-              <li>web Product</li>
-              <li>Mobile Apps Product</li>
-            </ul>
-          </Description>
-          <Description>
-            <strong>Tools</strong>
-            <ul>
-              <li>Notion</li>
-              <li>Excell</li>
-            </ul>
-          </Description>
-        </SkillMain>
+        <Spaceman>
+          <img src={astronaut} alt="Spaceman" />
+        </Spaceman>
 
-        <SkillMain>
-          <Title>
-            <Design width={40} height={40} /> Designer
-          </Title>
-          <Description>
-            I love to create design which speaks, Keep it clean, minimal and
-            simple.
-          </Description>
-          <Description>
-            <strong>I like to Design</strong>
-            <ul>
-              <li>web Design</li>
-              <li>Mobile Apps</li>
-            </ul>
-          </Description>
-          <Description>
-            <strong>Tools</strong>
-            <ul>
-              <li>Figma</li>
-              <li>Spline</li>
-            </ul>
-          </Description>
-        </SkillMain>
-
-        <SkillMain>
-          <Title>
-            <Develope width={40} height={40} /> Developer : Frontend
-          </Title>
-          <Description>
-            I value business or brand for which i'm creating, thus i enjoy
-            bringing new ideas to life.
-          </Description>
-
-          <Description>
-            <strong>Front Skills</strong>
-            <p>Html, Css, Js, React, Redux, Tailwind, Firebase </p>
-            <p>Flutter, Kotlin, React-Native, Python</p>
-          </Description>
-
-          <Description>
-            <strong>Tools</strong>
-            <p>VScode, Github, intellij, pycharm</p>
-          </Description>
-        </SkillMain>
+        <Main>
+          I'm a front-end developer located in SouthKorea. <br></br> <br></br>I
+          love to create simple yet beautiful websites with great user
+          experience. <br></br> <br></br>I am a developer from a content
+          marketer. <br></br>I think logical planning, design, and technology
+          change the world. <br></br>
+          <br></br>
+          I'm interested in front-end stacks like trying new things and building
+          projects with a solid business model. <br></br>
+          <br></br>
+          You are always welcome to contact us through social media. <br></br>
+          <br></br>
+          You have nothing to lose, Everything to gain. Just do it!! <br></br>{" "}
+        </Main>
       </SkillContainer>
     </ThemeProvider>
   );
