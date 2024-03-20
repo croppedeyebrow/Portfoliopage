@@ -1,9 +1,24 @@
 <h1>포트폴리오 홈페이지</h1>
 
+<h3>사용한 언어</h3>
+ <ul>
+   <li>HTML/CSS</li>
+   <li>JavaScript</li>
+   <li>React.js  + stylecomponents</li>
+
+ </ul>
+
 <h3>사용한 라이브러리</h3>
    <ul>
      <li>p5 //  yarn add p5</li>
+     <li>framer-motion</li>
+
    </ul>
+
+<h4>일러스트 파일 사용 출처</h4>
+출처 <a href="https://kr.freepik.com/free-vector/isolated-flat-compass_1637990.htm#query=%EB%82%98%EC%B9%A8%EB%B0%98&position=13&from_view=keyword&track=ais&uuid=8800dd80-32b5-4b8b-af24-d1ec5f89e85c">Freepik</a>
+
+---
 
 ![header](https://capsule-render.vercel.app/api?type=waving&color=6633CDEE&text=&animation=twinkling&height=80)
 
@@ -75,5 +90,3 @@
 [![Tech Blog Badge](http://img.shields.io/badge/-Tech%20blog-000000?style=flat-square&logo=tistory&link=https://cut-eyebrow.tistory.com/)](https://cut-eyebrow.tistory.com/)
 [![Gmail Badge](https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:lee940706@gmail.com)](mailto:lee940706@gmail.com)
 [![Naver Badge](https://img.shields.io/badge/Naver-03C75A?style=flat-square&logo=Naver&logoColor=white&link=mailto:ljs2894@naver.com)](mailto:ljs2894@naver.com)
-
-
