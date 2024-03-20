@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./globalStyle";
 import { darkTheme, lightTheme } from "./components/Themes";
@@ -18,7 +23,7 @@ function App() {
       <GlobalStyle />
       <Router>
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/Portfoliopage" element={<Main />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/work" element={<WorkPage />} />
