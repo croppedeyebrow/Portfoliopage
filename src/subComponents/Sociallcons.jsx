@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Github, Notion, Blog, Instagram } from "../components/AllSvgs";
-import { color } from "framer-motion";
+import { color, motion } from "framer-motion";
 import { darkTheme } from "../components/Themes";
 
 const Icons = styled.div`
@@ -15,7 +15,7 @@ const Icons = styled.div`
   left: 2rem;
   gap: 1rem;
   z-index: 3;
-
+ 
 
 
   &>*::not(:last-child){
@@ -24,7 +24,7 @@ const Icons = styled.div`
     // 마지막 자식을 제외한 모든 요소에 스타일을 적용
 `;
 
-const Line = styled.span`
+const Line = styled(motion.span)`
   width: 2px;
   height: 8rem;
   background-color: ${(props) =>
@@ -35,7 +35,11 @@ const Line = styled.span`
 const SocialIcons = (props) => {
   return (
     <Icons>
-      <div>
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ delay: 0.5 }}
+      >
         <a
           style={{ color: "inherit" }}
           target="_blank"
@@ -47,9 +51,13 @@ const SocialIcons = (props) => {
             fill={props.theme === "dark" ? darkTheme.text : darkTheme.body}
           />
         </a>
-      </div>
+      </motion.div>
 
-      <div>
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ delay: 0.7 }}
+      >
         <a
           style={{ color: "inherit" }}
           target="_blank"
@@ -61,8 +69,12 @@ const SocialIcons = (props) => {
             fill={props.theme === "dark" ? darkTheme.text : darkTheme.body}
           />
         </a>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ delay: 0.9 }}
+      >
         <a
           style={{ color: "inherit" }}
           target="_blank"
@@ -74,8 +86,12 @@ const SocialIcons = (props) => {
             fill={props.theme === "dark" ? darkTheme.text : darkTheme.body}
           />
         </a>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ delay: 1.1 }}
+      >
         <a
           style={{ color: "inherit" }}
           target="_blank"
@@ -87,8 +103,21 @@ const SocialIcons = (props) => {
             fill={props.theme === "dark" ? darkTheme.text : darkTheme.body}
           />
         </a>
-      </div>
-      <Line color={props.theme} />
+      </motion.div>
+      <Line
+        color={props.theme}
+        initial={{
+          height: 0,
+        }}
+        animate={{
+          height: "8rem",
+        }}
+        transition={{
+          type: "spring",
+          duration: 1,
+          delay: 0.8,
+        }}
+      />
     </Icons>
   );
 };

@@ -9,8 +9,9 @@ import { Blogs } from "../data/BlogData";
 import BlogComponent from "./BlogComponent";
 import AnchorComponent from "../subComponents/Anchor";
 import BigTitle2 from "../subComponents/BigTitle2";
+import { motion } from "framer-motion";
 
-const MainContainer = styled.div`
+const MainContainer = styled(motion.div)`
   background-image: url(${backimg});
   background-size: cover;
   background-repeat: no-repeat;
@@ -37,6 +38,7 @@ const BlockLine = styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
   grid-gap: calc(1rem + 2vw);
+  z-index: 5;
 `;
 
 //''가 아니라 ``를 사용하는 거라는 점 주의!
@@ -67,8 +69,17 @@ const BlogPage = () => {
 
         <Center>
           <BlockLine>
-            {Blogs.map((blog) => {
-              return <BlogComponent key={blog.id} blog={blog} />;
+            {Blogs.map((blog, index) => {
+              return (
+                <motion.div
+                  key={blog.id}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: index * 0.2 }}
+                >
+                  <BlogComponent blog={blog} />
+                </motion.div>
+              );
             })}
           </BlockLine>
         </Center>

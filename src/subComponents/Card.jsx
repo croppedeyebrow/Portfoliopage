@@ -100,7 +100,9 @@ const Item = {
     scale: 1,
     transition: {
       type: "spring",
-      duration: 0.5,
+      damping: 20,
+      stiffness: 100,
+      overshootClamping: true, // Add this line
     },
   },
 };

@@ -3,11 +3,11 @@ import styled from "styled-components";
 
 const Text = styled.h1`
   position: fixed;
-  z-index: 4;
+  z-index: 0;
   top: ${(props) => props.top};
   left: ${(props) => props.left};
   right: ${(props) => props.right};
-  color: rgba(252, 246, 244, 0.8);
+  color: rgba(0, 0, 0, 0.15);
   font-size: calc(10rem + 5vw);
 `;
 
