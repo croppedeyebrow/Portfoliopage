@@ -1,10 +1,12 @@
 {
   "files": {
     "main.css": "/Portfoliopage/static/css/main.58462fbc.css",
-    "main.js": "/Portfoliopage/static/js/main.cc891b71.js",
+    "main.js": "/Portfoliopage/static/js/main.4b825d37.js",
     "static/media/거인을데려와.mp3": "/Portfoliopage/static/media/거인을데려와.056936ddb994a4198463.mp3",
+    "static/media/cartoon-unscreen.gif": "/Portfoliopage/static/media/cartoon-unscreen.28e5ba9b4de3f2191f75.gif",
     "static/media/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg": "/Portfoliopage/static/media/patrick-tomasso-Oaqk7qqNh_c-unsplash.8ca90014fb6ce5980110.jpg",
     "static/media/ai프로필.png": "/Portfoliopage/static/media/ai프로필.245eb6619190ca45cc54.png",
+    "static/media/나침반.png": "/Portfoliopage/static/media/나침반.b5b024a5d691adb79f82.png",
     "static/media/frontend.jpg": "/Portfoliopage/static/media/frontend.73167baad4be930b74de.jpg",
     "static/media/crossplatform.jpg": "/Portfoliopage/static/media/crossplatform.d2e8d633813c23c44041.jpg",
     "static/media/spaceman.png": "/Portfoliopage/static/media/spaceman.5ec7fcfa9a803ead726c.png",
@@ -15,10 +17,10 @@
     "static/media/kotlin.jpg": "/Portfoliopage/static/media/kotlin.e6fe960a40633827a50a.jpg",
     "index.html": "/Portfoliopage/index.html",
     "main.58462fbc.css.map": "/Portfoliopage/static/css/main.58462fbc.css.map",
-    "main.cc891b71.js.map": "/Portfoliopage/static/js/main.cc891b71.js.map"
+    "main.4b825d37.js.map": "/Portfoliopage/static/js/main.4b825d37.js.map"
   },
   "entrypoints": [
     "static/css/main.58462fbc.css",
-    "static/js/main.cc891b71.js"
+    "static/js/main.4b825d37.js"
   ]
 }
