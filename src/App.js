@@ -21,7 +21,7 @@ function App() {
     <ThemeProvider theme={lightTheme}>
       <SoundBar />
       <GlobalStyle />
-      <Router basename="/Portfoliopage">
+      <Router>
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/about" element={<AboutPage />} />
