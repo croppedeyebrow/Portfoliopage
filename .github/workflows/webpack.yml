@@ -10,18 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
 
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+ steps:
+- name: Checkout
+  uses: actions/checkout@v3
 
-    - name: Setup node
-      uses: actions/setup-node@v3
-      with:
-        node-version: 21
+- name: Setup node
+  uses: actions/setup-node@v3
+  with:
+    node-version: 21
 
-    - name: Install dependencies
-      if: steps.node-modules-cache.outputs.cache-hit !='true'
-      run: npm ci
+- name: Install dependencies
+  if: steps.node-modules-cache.outputs.cache-hit !='true'
+  run: yarn install --frozen-lockfile
       
-    - name: Build React  
-      run: npm run build
+- name: Build React  
+  run: yarn build
