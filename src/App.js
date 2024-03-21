@@ -23,7 +23,7 @@ function App() {
       <GlobalStyle />
       <Router basename="/Portfoliopage">
         <Routes>
-          <Route path="/Portfoliopage" element={<Main />} />
+          <Route path="/" element={<Main />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/work" element={<WorkPage />} />

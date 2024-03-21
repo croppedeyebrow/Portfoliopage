@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfoliopage/static/css/main.58462fbc.css",
-    "main.js": "/Portfoliopage/static/js/main.27089641.js",
+    "main.js": "/Portfoliopage/static/js/main.ef0b7c3c.js",
     "static/media/거인을데려와.mp3": "/Portfoliopage/static/media/거인을데려와.056936ddb994a4198463.mp3",
     "static/media/cartoon-unscreen.gif": "/Portfoliopage/static/media/cartoon-unscreen.28e5ba9b4de3f2191f75.gif",
     "static/media/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg": "/Portfoliopage/static/media/patrick-tomasso-Oaqk7qqNh_c-unsplash.8ca90014fb6ce5980110.jpg",
@@ -17,10 +17,10 @@
     "static/media/kotlin.jpg": "/Portfoliopage/static/media/kotlin.e6fe960a40633827a50a.jpg",
     "index.html": "/Portfoliopage/index.html",
     "main.58462fbc.css.map": "/Portfoliopage/static/css/main.58462fbc.css.map",
-    "main.27089641.js.map": "/Portfoliopage/static/js/main.27089641.js.map"
+    "main.ef0b7c3c.js.map": "/Portfoliopage/static/js/main.ef0b7c3c.js.map"
   },
   "entrypoints": [
     "static/css/main.58462fbc.css",
-    "static/js/main.27089641.js"
+    "static/js/main.ef0b7c3c.js"
   ]
 }
