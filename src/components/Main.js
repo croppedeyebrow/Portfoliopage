@@ -4,7 +4,7 @@ import PowerButton from "../subComponents/PowerButton";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/Sociallcons";
 import { NavLink } from "react-router-dom";
-import { Taegeuk } from "./AllSvgs";
+import compass from "../assets/Images/cartoon-unscreen.gif";
 import { keyframes } from "styled-components";
 import Intro from "./Intro";
 import { motion } from "framer-motion";
@@ -118,7 +118,7 @@ const Center = styled.button`
   //ease = 시작할때는 느리게, 중간에는 빠르게, 끝날때는 느리게 변화하도록 설정
 
   &>:first-child {
-    animation: ${rotate} infinite 1.5s linear;
+    animation: ${rotate} infinite 3s linear;
   }
 
 
@@ -139,6 +139,8 @@ const DarkDiv = styled.div`
   z-index: 1;
   transition: height 0.5s ease, width 1s ease 0.5s;
 `;
+
+const Compass = styled.img``;
 
 //height 0.5s ease는 height 속성의 변화에 대해 트랜지션 효과를 적용하고, 지속 시간을 0.5초로 설정
 //변화가 시작할 때 느리게, 그 다음에 빠르게, 마지막에 다시 느리게 변화
@@ -165,10 +167,12 @@ const Main = () => {
         <SocialIcons theme={click ? "dark" : "light"} />
 
         <Center click={click}>
-          <Taegeuk
+          <Compass
+            src={compass}
+            alt="compass"
             onClick={() => handleClick()}
-            width={click ? 120 : 240}
-            height={click ? 120 : 240}
+            width={click ? 120 : 360}
+            height={click ? 120 : 360}
             fill="currentColor"
           />
           <span>Click Here</span>

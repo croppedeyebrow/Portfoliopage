@@ -8,7 +8,7 @@ import PowerButton from "../subComponents/PowerButton";
 import BigTitle from "../subComponents/BigTitle";
 import { Work } from "../data/WorkData";
 import Card from "../subComponents/Card";
-import { Taegeuk } from "./AllSvgs";
+import compassfile from "../assets/Images/나침반.png";
 import { motion } from "framer-motion";
 
 const WorkContainer = styled.div`
@@ -51,16 +51,20 @@ const container = {
   },
 };
 
+const Compass = styled.img`
+  cursor: pointer;
+`;
+
 const WorkPage = () => {
   const ref = useRef(null);
-  const taeguek = useRef(null);
+  const compass = useRef(null);
 
   useEffect(() => {
     const rotate = () => {
       const element = ref.current;
       if (element) {
         element.style.transform = `translateX(${-window.scrollY}px)`;
-        taeguek.current.style.transform = `rotate(${-window.scrollY}deg)`;
+        compass.current.style.transform = `rotate(${-window.scrollY}deg)`;
       }
     };
 
@@ -86,8 +90,8 @@ const WorkPage = () => {
           ))}
         </WokrMain>
 
-        <Rotate ref={taeguek}>
-          <Taegeuk width={70} height={70} fill={darkTheme.text} />
+        <Rotate ref={compass}>
+          <Compass src={compassfile} alt="compass" width={100} height={100} />
         </Rotate>
 
         <BigTitle text="WORK" top="5%" right="10%" />
