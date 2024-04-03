@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import Me from "../assets/Images/ai프로필.png";
+import Me from "../assets/Images/증명사진샘플03.jpg";
 
 const Box = styled(motion.div)`
   width: 65vw;

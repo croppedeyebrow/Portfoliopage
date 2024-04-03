@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.58462fbc.css",
-    "main.js": "/static/js/main.98b19ebc.js",
+    "main.js": "/static/js/main.8ab21d7e.js",
     "static/media/거인을데려와.mp3": "/static/media/거인을데려와.056936ddb994a4198463.mp3",
     "static/media/cartoon-unscreen.gif": "/static/media/cartoon-unscreen.28e5ba9b4de3f2191f75.gif",
     "static/media/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg": "/static/media/patrick-tomasso-Oaqk7qqNh_c-unsplash.8ca90014fb6ce5980110.jpg",
-    "static/media/ai프로필.png": "/static/media/ai프로필.245eb6619190ca45cc54.png",
     "static/media/나침반.png": "/static/media/나침반.b5b024a5d691adb79f82.png",
     "static/media/frontend.jpg": "/static/media/frontend.73167baad4be930b74de.jpg",
     "static/media/crossplatform.jpg": "/static/media/crossplatform.d2e8d633813c23c44041.jpg",
     "static/media/spaceman.png": "/static/media/spaceman.5ec7fcfa9a803ead726c.png",
+    "static/media/증명사진샘플03.jpg": "/static/media/증명사진샘플03.f1d32d24b7545873e85d.jpg",
     "static/media/DB.jpg": "/static/media/DB.c6e4b6e21410d7d1950f.jpg",
     "static/media/director-black.png": "/static/media/director-black.35f15f43b87141a2501e.png",
     "static/media/python.jpg": "/static/media/python.8844b3821c0ce1e1e552.jpg",
@@ -17,10 +17,10 @@
     "static/media/kotlin.jpg": "/static/media/kotlin.e6fe960a40633827a50a.jpg",
     "index.html": "/index.html",
     "main.58462fbc.css.map": "/static/css/main.58462fbc.css.map",
-    "main.98b19ebc.js.map": "/static/js/main.98b19ebc.js.map"
+    "main.8ab21d7e.js.map": "/static/js/main.8ab21d7e.js.map"
   },
   "entrypoints": [
     "static/css/main.58462fbc.css",
-    "static/js/main.98b19ebc.js"
+    "static/js/main.8ab21d7e.js"
   ]
 }
