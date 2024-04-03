@@ -35,7 +35,7 @@ const LogoComponent = (props) => {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-      navigate("/Portfoliopage");
+      navigate("/");
     }, 1000);
   };
 
